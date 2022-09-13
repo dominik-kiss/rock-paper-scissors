@@ -62,7 +62,7 @@ function playRound(playerChoice, computerChoice) {
         }
     }
 }
-
+/*
 function game() {
     let playerScore = 0;
     let computerScore = 0;
@@ -92,3 +92,4 @@ function game() {
 }
 
 game();
+*/

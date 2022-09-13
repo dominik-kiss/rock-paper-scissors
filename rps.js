@@ -15,7 +15,7 @@ function getComputerChoice() {
     }
     return choice.toLowerCase();
 }
-
+/*
 function getPlayerChoice() {
     let playerChoice = prompt("Rock, paper or scissors?").toLowerCase();
 
@@ -25,40 +25,44 @@ function getPlayerChoice() {
     }
     return playerChoice;
 }
+*/
 
-function playRound(playerChoice, computerChoice) {
+function playRound() {
+
+    let computerChoice = getComputerChoice();
+    let playerChoice = this.textContent; //Get the textcontent from the button this function was called on by the event listener
 
     console.log("Computer choice: " + computerChoice);
     console.log("Player choice: " + playerChoice);
 
     if (playerChoice == computerChoice) {
-        return "draw";
+        console.log("It's a draw!");
     }
 
     else if (playerChoice == "rock") {
         if (computerChoice == "paper") {
-            return "computer";
+            console.log("You lose! Paper beats rock!");
         }
         else if (computerChoice == "scissors") {
-            return "player";
+            console.log("You win! Rock beats scissors!");
         }
     }
 
     else if (playerChoice == "paper") {
         if (computerChoice == "scissors") {
-            return "computer";
+            console.log("You lose! Scissors beat paper!");
         }
         else if (computerChoice == "rock") {
-            return "player";
+            console.log("You win! Paper beats rock!");
         }
     }
 
     else if (playerChoice == "scissors") {
         if (computerChoice == "rock") {
-            return "computer";
+            console.log("You lose! Rock beats scissors!");
         }
         else if (computerChoice == "paper") {
-            return "player";
+            console.log("You win! Scissors beat paper!");
         }
     }
 }
@@ -93,3 +97,11 @@ function game() {
 
 game();
 */
+
+let rock = document.querySelector("#rock");
+let paper = document.querySelector("#paper");
+let scissors = document.querySelector("#scissors");
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => button.addEventListener("click", playRound));

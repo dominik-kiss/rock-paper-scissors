@@ -21,45 +21,73 @@ function playRound() {
     let computerChoice = getComputerChoice();
     let playerChoice = this.textContent; //Get the textcontent from the button this function was called on by the event listener
 
-    console.log("Computer choice: " + computerChoice);
-    console.log("Player choice: " + playerChoice);
+    currentChoice.textContent = `Player choice: ${playerChoice}  -  Computer choice: ${computerChoice}`;
 
     if (playerChoice == computerChoice) {
-        console.log("It's a draw!");
+        currentRound.textContent = "It's a draw!"
     }
 
     else if (playerChoice == "rock") {
         if (computerChoice == "paper") {
-            console.log("You lose! Paper beats rock!");
+            computerScore += 1;
+            currentRound.textContent = "You lose! Paper beats rock!";
+
         }
         else if (computerChoice == "scissors") {
-            console.log("You win! Rock beats scissors!");
+            playerScore += 1;
+            currentRound.textContent = "You win! Rock beats scissors!";
         }
     }
 
     else if (playerChoice == "paper") {
         if (computerChoice == "scissors") {
-            console.log("You lose! Scissors beat paper!");
+            computerScore += 1;
+            currentRound.textContent = "You lose! Scissors beat paper!";
         }
         else if (computerChoice == "rock") {
-            console.log("You win! Paper beats rock!");
+            playerScore += 1;
+            currentRound.textContent = "You win! Paper beats rock!";
         }
     }
 
     else if (playerChoice == "scissors") {
         if (computerChoice == "rock") {
-            console.log("You lose! Rock beats scissors!");
+            computerScore += 1;
+            currentRound.textContent = "You lose! Rock beats scissors!";
         }
         else if (computerChoice == "paper") {
-            console.log("You win! Scissors beat paper!");
+            playerScore += 1;
+            currentRound.textContent = "You win! Scissors beat paper!";
         }
     }
+
+    runningScore.textContent = `Player: ${playerScore}  -  Computer: ${computerScore}`;
+
+    if (playerScore == 5) {
+        runningScore.textContent = "CONGRATS! YOU WIN!";
+        playerScore = 0;
+        computerScore = 0;
+    }
+    else if (computerScore == 5) {
+        runningScore.textContent = "YOU LOSE!";
+        playerScore = 0;
+        computerScore = 0;
+    }
 }
+
+let playerScore = 0;
+let computerScore = 0;
 
 let rock = document.querySelector("#rock");
 let paper = document.querySelector("#paper");
 let scissors = document.querySelector("#scissors");
 
 const buttons = document.querySelectorAll("button");
+
+let container = document.querySelector("#container");
+let currentChoice = document.querySelector("#current-choice");
+let currentRound = document.querySelector("#current-round");
+let runningScore = document.querySelector("#running-score");
+let finish = document.querySelector("#finish");
 
 buttons.forEach(button => button.addEventListener("click", playRound));

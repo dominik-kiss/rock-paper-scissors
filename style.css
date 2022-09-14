@@ -76,3 +76,13 @@ body {
 #scissors {
     background-image: url(images/scissors_flipped.png);
 }
+
+.button {
+    transition: all .05s ease;
+}
+
+.pressed {
+    transform: scale(1.1);
+    background-color: #c06c84;
+    border-radius: 10px;
+  }

@@ -21,6 +21,8 @@ function playRound() {
     let computerChoice = getComputerChoice();
     let playerChoice = this.id; //Get the textcontent from the button this function was called on by the event listener
     
+    this.classList.add("pressed");
+
     currentChoice.id = `Player choice: ${playerChoice}  -  Computer choice: ${computerChoice}`;
 
     if (playerChoice == computerChoice) {
@@ -75,6 +77,10 @@ function playRound() {
     }
 }
 
+function removeEffect(e) {
+    this.classList.remove("pressed");
+}
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -91,3 +97,6 @@ let runningScore = document.querySelector("#running-score");
 let finish = document.querySelector("#finish");
 
 buttons.forEach(button => button.addEventListener("click", playRound));
+
+buttons.forEach(button => button.addEventListener("transitionend", removeEffect));
+

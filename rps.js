@@ -84,7 +84,7 @@ let scissors = document.querySelector("#scissors");
 
 const buttons = document.querySelectorAll("button");
 
-let container = document.querySelector("#container");
+let board = document.querySelector("#board");
 let currentChoice = document.querySelector("#current-choice");
 let currentRound = document.querySelector("#current-round");
 let runningScore = document.querySelector("#running-score");

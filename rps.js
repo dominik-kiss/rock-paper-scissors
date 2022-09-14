@@ -19,9 +19,9 @@ function getComputerChoice() {
 function playRound() {
 
     let computerChoice = getComputerChoice();
-    let playerChoice = this.textContent; //Get the textcontent from the button this function was called on by the event listener
-
-    currentChoice.textContent = `Player choice: ${playerChoice}  -  Computer choice: ${computerChoice}`;
+    let playerChoice = this.id; //Get the textcontent from the button this function was called on by the event listener
+    
+    currentChoice.id = `Player choice: ${playerChoice}  -  Computer choice: ${computerChoice}`;
 
     if (playerChoice == computerChoice) {
         currentRound.textContent = "It's a draw!"

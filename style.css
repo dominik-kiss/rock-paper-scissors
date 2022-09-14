@@ -66,13 +66,13 @@ body {
 }
 
 #rock {
-    background-image: url(images/rock.png);
+    background-image: url(images/rock_flipped.png);
 }
 
 #paper {
-    background-image: url(images/paper.png);
+    background-image: url(images/paper_flipped.png);
 }
 
 #scissors {
-    background-image: url(images/scissors.png);
+    background-image: url(images/scissors_flipped.png);
 }

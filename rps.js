@@ -82,7 +82,7 @@ let rock = document.querySelector("#rock");
 let paper = document.querySelector("#paper");
 let scissors = document.querySelector("#scissors");
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".button");
 
 let board = document.querySelector("#board");
 let currentChoice = document.querySelector("#current-choice");

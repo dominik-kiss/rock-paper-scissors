@@ -1,23 +1,38 @@
 body {
     font-family: 'Allerta Stencil';font-size: 22px;
     margin: 0;
+    margin: auto;
 }
 
 
-.page {
-    background-color: rgba(251,251,251,255);
-    background-image: url(images/bg6.jpg);
-    width: 100%;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 70%;
+#main-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: #9cd3d3;
+    width: 50%;
 }
 
-.container {
-    height: 58%;
-    width: 39%;
+#buttons {
+
 }
+
+#board {
+
+}
+/*
+Color palette: https://palettes.shecodes.io/palettes/617
+.first-color { 
+	background: #b6e1e0; 
+}
+	
+.second-color { 
+	background: #9cd3d3; 
+}
+
+.third-color { 
+	background: #e8630a;
+}
+
+.fourth-color { 
+	background: #2b4353; 
+
+*/

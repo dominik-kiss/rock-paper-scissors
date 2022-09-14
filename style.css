@@ -78,11 +78,16 @@ body {
 }
 
 .button {
-    transition: all .05s ease;
+    transition: background-color 0.3s ease-out;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.hovered {
+    background-color: #c06c84;
+    transform: scale(1.1);
 }
 
 .pressed {
-    transform: scale(1.1);
-    background-color: #c06c84;
-    border-radius: 10px;
+    transform: rotate(-0.125turn);
   }

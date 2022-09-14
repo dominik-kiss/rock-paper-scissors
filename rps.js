@@ -81,6 +81,10 @@ function removeEffect(e) {
     this.classList.remove("pressed");
 }
 
+function transition(e) {
+    this.classList.toggle("hovered");
+}
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -97,6 +101,9 @@ let runningScore = document.querySelector("#running-score");
 let finish = document.querySelector("#finish");
 
 buttons.forEach(button => button.addEventListener("click", playRound));
+
+buttons.forEach(button => button.addEventListener("mouseenter", transition));
+buttons.forEach(button => button.addEventListener("mouseleave", transition));
 
 buttons.forEach(button => button.addEventListener("transitionend", removeEffect));
 

@@ -1,38 +1,43 @@
 body {
     font-family: 'Allerta Stencil';font-size: 22px;
     margin: 0;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#header {
+    width: 100%;
+    height: 50px;
+    background-color: #c06c84;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#title {
+    background-image: url(images/logo.svg);
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#logo {
+    height: 50px;
+}
 
 #main-container {
     display: flex;
-    background-color: #9cd3d3;
-    width: 50%;
+    justify-content: space-between;
+    background-image: url(images/scene.png);
+    width: 1280px;
+    height: 720px;
+    border-radius: 0 0 20px 20px;
 }
 
-#buttons {
-
+#rock {
+    background-image: url(images/rock.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
 }
-
-#board {
-
-}
-/*
-Color palette: https://palettes.shecodes.io/palettes/617
-.first-color { 
-	background: #b6e1e0; 
-}
-	
-.second-color { 
-	background: #9cd3d3; 
-}
-
-.third-color { 
-	background: #e8630a;
-}
-
-.fourth-color { 
-	background: #2b4353; 
-
-*/
